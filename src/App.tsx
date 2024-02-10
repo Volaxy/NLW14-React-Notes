@@ -16,8 +16,8 @@ export function App() {
             <div className="grid grid-cols-3 gap-6 auto-rows-[15rem]">
                 <NewNoteCard />
                 
-                <NoteCard />
-                <NoteCard />
+                <NoteCard date={new Date()} content="Hello" />
+                <NoteCard date={new Date()} content="Content" />
             </div>
         </div>
     );
