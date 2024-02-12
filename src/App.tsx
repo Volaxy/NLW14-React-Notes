@@ -42,6 +42,13 @@ export function App() {
 
     const filteredNotes = search !== "" ? notes.filter(note => note.content.toLowerCase().includes(search.toLowerCase())) : notes;
 
+    function onNoteDeleted(id: string) {
+        const newNotes = notes.filter(note => note.id !== id);
+
+        setNotes(newNotes);
+        localStorage.setItem("notes", JSON.stringify(newNotes));
+    }
+
     return (
         <div className="mx-auto max-w-6xl my-12 space-y-6 px-5">
             <img src={logo} alt="NLW Expert" />
@@ -60,7 +67,7 @@ export function App() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[15rem]">
                 <NewNoteCard onNoteCreated={onNoteCreated} />
 
-                {filteredNotes.map(note => <NoteCard key={note.id} date={note.date} content={note.content} />)}
+                {filteredNotes.map(note => <NoteCard key={note.id} id={note.id} date={note.date} content={note.content} onNoteDeleted={onNoteDeleted} />)}
             </div>
         </div>
     );
