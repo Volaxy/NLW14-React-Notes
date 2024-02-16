@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# NLW 14 - Trilha React - Sistema de Notas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site responsivo de notas, onde é possível escrever uma nota pelo teclado, ou pela fala através do microfone. As notas são armazenadas pelo browser, onde mesmo que o navegador seja fechado, as notas continuam armazenadas no cache.
 
-Currently, two official plugins are available:
+![Página de dashboard do sistema de notas](./readme/banner.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<hr>
 
-## Expanding the ESLint configuration
+## :computer: Tecnologias Usadas
+<img alt='HTML5 Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/html-5.svg' />&nbsp;
+<img alt='CSS3 Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/css-3.svg' />&nbsp;
+<img alt='Tailwind Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/tailwindcss-icon.svg' />&nbsp;
+<img alt='JavaScript Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/javascript.svg' />&nbsp;
+<img alt='React Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/react.svg' />&nbsp;
+<img alt='TypeScript Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/typescript-icon.svg' />&nbsp;
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## ⚙ Configurações Iniciais
+1. Instale as dependências do projeto com o comando abaixo:
+```bash
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Execute o servidor **vite** com:
+```bash
+npm run dev
+```
+
+3. Abra o navegador na URL: *http://localhost:5173*.
+
+## 💿 Como Executar
+
+A aplicação consiste em criar **notas** através do teclado ou do microfone.
+
+Clique no 1º card:
+
+![Card para criar uma nova nota](./readme/create-note.png)
+
+Escolha de qual forma você deseja escrever na nota:
+
+![Escolher opção de escrever na nota através do microfone ou através do teclado](./readme/chose-option.png)
